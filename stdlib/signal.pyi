@@ -152,10 +152,12 @@ else:
         SIGRTMIN: Signals
         if sys.version_info >= (3, 11):
             SIGSTKFLT: Signals
+
         @final
         class struct_siginfo(structseq[int], tuple[int, int, int, int, int, int, int]):
             if sys.version_info >= (3, 10):
                 __match_args__: Final = ("si_signo", "si_code", "si_errno", "si_pid", "si_uid", "si_status", "si_band")
+
             @property
             def si_signo(self) -> int: ...
             @property

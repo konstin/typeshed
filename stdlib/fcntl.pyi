@@ -101,6 +101,7 @@ if sys.platform != "win32":
         I_STR: int
         I_SWROPT: int
         I_UNLINK: int
+
     @overload
     def fcntl(__fd: FileDescriptorLike, __cmd: int, __arg: int = 0) -> int: ...
     @overload
